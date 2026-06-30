@@ -17,6 +17,8 @@ const BillSummary = () => {
   const cartItems = useAppSelector(selectCartItems);
   const totalPrice = useAppSelector(selectTotalPrice);
 
+  const isCartEmpty = cartItems.length === 0;
+
   const handlePay = () => {
     alert("Thank you for your Purchase:)");
     dispatch(clearCart());
@@ -76,13 +78,14 @@ const BillSummary = () => {
         </div>
 
         <div className="flex gap-3">
-          <Button onClick={handlePay} fullWidth>
+          <Button onClick={handlePay} fullWidth disabled={isCartEmpty}>
             Pay
           </Button>
 
           <Button
             fullWidth
             variant="secondary"
+            disabled={isCartEmpty}
             onClick={() => dispatch(clearCart())}
           >
             Clear

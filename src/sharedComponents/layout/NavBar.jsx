@@ -23,7 +23,7 @@ export const NavBar = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-black border-b">
+    <header className="sticky top-0 z-50  bg-black border-b">
       <Container>
         <div className="flex flex-col">
           {/* Top Row */}
