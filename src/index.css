@@ -1,0 +1,22 @@
+:root {
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --border: #e5e7eb;
+  --color-primary: #f8f9fa;
+}
+body {
+  margin: 0;
+}
+
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--text-primary);
+  background-color: var(--color-primary);
+  border-inline: 1px solid var(--border);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
